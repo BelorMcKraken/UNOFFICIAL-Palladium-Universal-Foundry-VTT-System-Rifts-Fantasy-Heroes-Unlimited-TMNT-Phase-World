@@ -102,7 +102,7 @@ adapts to any Palladium variant
 
 Install via manifest URL in Foundry VTT:
 
-[PASTE YOUR MANIFEST LINK HERE]
+https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/releases/latest/download/system.json
 ⚠️ Disclaimer
 
 This is an unofficial system and is not affiliated with or endorsed by Palladium Books.
@@ -133,10 +133,6 @@ Feel free to open issues or submit pull requests.
 
 Because instead of juggling 5 different systems…
 
-👉 you now have ONE SHEET TO RULE THEM ALL
+👉 you now have ONE SHEET TO RULE THEM ALL@
 
-If you want, next I can:
 
-add badges (version, Foundry compatibility, downloads)
-create a slick README banner using your artwork
-or write a “Getting Started Guide” section for new users 👍
