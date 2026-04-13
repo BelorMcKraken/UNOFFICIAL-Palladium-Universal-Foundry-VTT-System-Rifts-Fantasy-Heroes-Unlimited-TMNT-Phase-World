@@ -1,0 +1,56 @@
+{
+  "id": "palladium-universal",
+  "title": "Palladium Universal",
+  "description": "A modern universal Palladium Books system starter with tabs, collapsible panels, and derived stats.",
+  "version": "0.2.0",
+  "background": "systems/palladium-universal/assets/icon.png",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Belor McKraken",
+      "url": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World"
+    }
+  ],
+  "esmodules": [
+    "module/system.js"
+  ],
+  "styles": [
+    "styles/actor-sheet.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "media": [
+    {
+      "type": "icon",
+      "path": "assets/icon.png"
+    }
+  ],
+  "primaryTokenAttribute": "health.hp",
+  "secondaryTokenAttribute": "health.sdc",
+  "documentTypes": {
+    "Actor": {
+      "character": {
+        "htmlFields": [
+          "notes"
+        ]
+      }
+    }
+  },
+  "socket": false,
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "manifest": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/releases/latest/download/system.json",
+  "download": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/releases/latest/download/palladium-universal.zip",
+  "url": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World",
+  "changelog": "https://raw.githubusercontent.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/main/CHANGELOG.md"
+}
