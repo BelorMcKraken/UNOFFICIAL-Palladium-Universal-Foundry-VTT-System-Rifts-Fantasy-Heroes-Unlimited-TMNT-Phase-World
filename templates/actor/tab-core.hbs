@@ -1,0 +1,106 @@
+<section class="tab" data-group="primary" data-tab="core">
+  {{!-- Attributes --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Attributes</h2></div>
+    <div class="attributes-grid">
+      <div class="field">
+        <label>I.Q.</label>
+        <input type="number" name="system.attributes.iq.value" value="{{system.attributes.iq.value}}" />
+      </div>
+      <div class="field">
+        <label>M.E.</label>
+        <input type="number" name="system.attributes.me.value" value="{{system.attributes.me.value}}" />
+      </div>
+      <div class="field">
+        <label>M.A.</label>
+        <input type="number" name="system.attributes.ma.value" value="{{system.attributes.ma.value}}" />
+      </div>
+      <div class="field">
+        <label>P.S.</label>
+        <input type="number" name="system.attributes.ps.value" value="{{system.attributes.ps.value}}" />
+      </div>
+      <div class="field">
+        <label>P.P.</label>
+        <input type="number" name="system.attributes.pp.value" value="{{system.attributes.pp.value}}" />
+      </div>
+      <div class="field">
+        <label>P.E.</label>
+        <input type="number" name="system.attributes.pe.value" value="{{system.attributes.pe.value}}" />
+      </div>
+      <div class="field">
+        <label>P.B.</label>
+        <input type="number" name="system.attributes.pb.value" value="{{system.attributes.pb.value}}" />
+      </div>
+      <div class="field">
+        <label>Spd</label>
+        <input type="number" name="system.attributes.spd.value" value="{{system.attributes.spd.value}}" />
+      </div>
+    </div>
+  </section>
+
+  {{!-- Derived Bonuses --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Derived Bonuses</h2></div>
+    <div class="derived-grid">
+      <div class="readonly-field">
+        <label>I.Q. Skill Bonus</label>
+        <input type="text" value="{{system.derived.iqSkillBonus}}" readonly />
+      </div>
+      <div class="readonly-field">
+        <label>P.P. Combat Bonus</label>
+        <input type="text" value="{{system.derived.ppCombatBonus}}" readonly />
+      </div>
+      <div class="readonly-field">
+        <label>P.E. HP Bonus</label>
+        <input type="text" value="{{system.derived.peHpBonus}}" readonly />
+      </div>
+      <div class="readonly-field">
+        <label>P.S. Damage Bonus</label>
+        <input type="text" value="{{system.derived.psDamageBonus}}" readonly />
+      </div>
+      <div class="readonly-field">
+        <label>Perception</label>
+        <input type="text" value="{{system.derived.perception}}" readonly />
+      </div>
+    </div>
+  </section>
+
+  {{!-- Health & Damage --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Health &amp; Damage</h2></div>
+    <div class="health-grid">
+      <div class="field">
+        <label>HP Current</label>
+        <input type="number" name="system.health.hp.value" value="{{system.health.hp.value}}" />
+      </div>
+      <div class="field">
+        <label>HP Max</label>
+        <input type="number" name="system.health.hp.max" value="{{system.health.hp.max}}" />
+      </div>
+      <div class="field">
+        <label>SDC Current</label>
+        <input type="number" name="system.health.sdc.value" value="{{system.health.sdc.value}}" />
+      </div>
+      <div class="field">
+        <label>SDC Max</label>
+        <input type="number" name="system.health.sdc.max" value="{{system.health.sdc.max}}" />
+      </div>
+      <div class="field">
+        <label>MDC Current</label>
+        <input type="number" name="system.health.mdc.value" value="{{system.health.mdc.value}}" />
+      </div>
+      <div class="field">
+        <label>MDC Max</label>
+        <input type="number" name="system.health.mdc.max" value="{{system.health.mdc.max}}" />
+      </div>
+      <div class="field">
+        <label>Armor</label>
+        <input type="text" name="system.health.armor" value="{{system.health.armor}}" />
+      </div>
+      <div class="field">
+        <label>Force Field</label>
+        <input type="number" name="system.health.forceField.value" value="{{system.health.forceField.value}}" />
+      </div>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,94 @@
+<section class="tab" data-group="primary" data-tab="combat">
+  {{!-- Combat Stats --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Combat</h2></div>
+    <div class="combat-grid">
+      <div class="field">
+        <label>Initiative</label>
+        <input type="number" name="system.derived.initiative" value="{{system.derived.initiative}}" />
+      </div>
+      <div class="field">
+        <label>Attacks per Melee</label>
+        <input type="number" name="system.combat.attacksPerMelee" value="{{system.combat.attacksPerMelee}}" />
+      </div>
+      <div class="field">
+        <label>Strike</label>
+        <input type="number" name="system.derived.strike" value="{{system.derived.strike}}" />
+      </div>
+      <div class="field">
+        <label>Parry</label>
+        <input type="number" name="system.derived.parry" value="{{system.derived.parry}}" />
+      </div>
+      <div class="field">
+        <label>Dodge</label>
+        <input type="number" name="system.derived.dodge" value="{{system.derived.dodge}}" />
+      </div>
+      <div class="field">
+        <label>Damage Bonus</label>
+        <input type="number" name="system.combat.damageBonus" value="{{system.combat.damageBonus}}" />
+      </div>
+      <div class="field">
+        <label>Disarm</label>
+        <input type="number" name="system.combat.disarm" value="{{system.combat.disarm}}" />
+      </div>
+      <div class="field">
+        <label>Pull Punch</label>
+        <input type="number" name="system.combat.pullPunch" value="{{system.combat.pullPunch}}" />
+      </div>
+      <div class="field">
+        <label>Roll w/ Impact</label>
+        <input type="number" name="system.combat.rollImpact" value="{{system.combat.rollImpact}}" />
+      </div>
+    </div>
+  </section>
+
+  {{!-- Critical / KO --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Critical / KO / Stun</h2></div>
+    <div class="stacked-fields">
+      <div class="field">
+        <label>Critical Strike</label>
+        <input type="text" name="system.combat.critical" value="{{system.combat.critical}}" />
+      </div>
+      <div class="field">
+        <label>Knockout / Stun</label>
+        <input type="text" name="system.combat.koStun" value="{{system.combat.koStun}}" />
+      </div>
+    </div>
+  </section>
+
+  {{!-- Saving Throws --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Saving Throws</h2></div>
+    <div class="saves-grid">
+      <div class="field">
+        <label>vs Magic</label>
+        <input type="number" name="system.saves.magic" value="{{system.saves.magic}}" />
+      </div>
+      <div class="field">
+        <label>vs Psionics</label>
+        <input type="number" name="system.saves.psionics" value="{{system.saves.psionics}}" />
+      </div>
+      <div class="field">
+        <label>vs Poison / Toxin</label>
+        <input type="number" name="system.saves.poison" value="{{system.saves.poison}}" />
+      </div>
+      <div class="field">
+        <label>vs Horror Factor</label>
+        <input type="number" name="system.saves.horror" value="{{system.saves.horror}}" />
+      </div>
+      <div class="field">
+        <label>vs Possession</label>
+        <input type="number" name="system.saves.possession" value="{{system.saves.possession}}" />
+      </div>
+      <div class="field">
+        <label>vs Insanity</label>
+        <input type="number" name="system.saves.insanity" value="{{system.saves.insanity}}" />
+      </div>
+      <div class="field">
+        <label>vs Coma / Death</label>
+        <input type="number" name="system.saves.comaDeath" value="{{system.saves.comaDeath}}" />
+      </div>
+    </div>
+  </section>
+</section>

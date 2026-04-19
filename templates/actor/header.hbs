@@ -1,0 +1,38 @@
+<header class="sheet-header">
+  <div class="header-left">
+    <h1 class="charname">
+      <input name="name" type="text" value="{{actor.name}}" placeholder="Character Name" />
+    </h1>
+    <div class="identity-grid">
+      <div class="field">
+        <label>Alignment</label>
+        <input type="text" name="system.identity.alignment" value="{{system.identity.alignment}}" />
+      </div>
+      <div class="field">
+        <label>Level</label>
+        <input type="number" name="system.identity.level" value="{{system.identity.level}}" />
+      </div>
+      <div class="field">
+        <label>XP</label>
+        <input type="number" name="system.identity.xp" value="{{system.identity.xp}}" />
+      </div>
+      <div class="field">
+        <label>O.C.C. / R.C.C.</label>
+        <input type="text" name="system.identity.classLabel" value="{{system.identity.classLabel}}" />
+      </div>
+      <div class="field">
+        <label>Species</label>
+        <input type="text" name="system.identity.species" value="{{system.identity.species}}" />
+      </div>
+      <div class="field">
+        <label>Campaign</label>
+        <input type="text" name="system.identity.campaign" value="{{system.identity.campaign}}" />
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="token-box">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="Click to change token image" />
+    </div>
+  </div>
+</header>

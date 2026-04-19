@@ -1,0 +1,202 @@
+<section class="tab" data-group="primary" data-tab="modules">
+
+  {{!-- Module Toggles --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Module Toggles</h2></div>
+    <div class="toggle-grid">
+      <label><input type="checkbox" name="system.toggles.useMdc" {{checked system.toggles.useMdc}} /> Use MDC</label>
+      <label><input type="checkbox" name="system.toggles.useMagic" {{checked system.toggles.useMagic}} /> Magic</label>
+      <label><input type="checkbox" name="system.toggles.usePsionics" {{checked system.toggles.usePsionics}} /> Psionics</label>
+      <label><input type="checkbox" name="system.toggles.useMutations" {{checked system.toggles.useMutations}} /> Mutations</label>
+      <label><input type="checkbox" name="system.toggles.useSuperPowers" {{checked system.toggles.useSuperPowers}} /> Super Powers</label>
+      <label><input type="checkbox" name="system.toggles.useMecha" {{checked system.toggles.useMecha}} /> Mecha / Vehicle</label>
+      <label><input type="checkbox" name="system.toggles.useSurvivalHorror" {{checked system.toggles.useSurvivalHorror}} /> Survival / Horror</label>
+    </div>
+  </section>
+
+  {{!-- Magic --}}
+  {{#if system.toggles.useMagic}}
+  <section class="panel">
+    <div class="panel-header"><h2>Magic</h2></div>
+    <div class="module-grid">
+      <div class="field">
+        <label>PPE Current</label>
+        <input type="number" name="system.magic.ppe.value" value="{{system.magic.ppe.value}}" />
+      </div>
+      <div class="field">
+        <label>PPE Max</label>
+        <input type="number" name="system.magic.ppe.max" value="{{system.magic.ppe.max}}" />
+      </div>
+      <div class="field">
+        <label>Spell Strength</label>
+        <input type="text" name="system.magic.spellStrength" value="{{system.magic.spellStrength}}" />
+      </div>
+    </div>
+    {{#if spells.length}}
+    <table class="item-list">
+      <thead>
+        <tr><th>Spell</th><th>Lvl</th><th>PPE</th><th>Controls</th></tr>
+      </thead>
+      <tbody>
+        {{#each spells}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.spellLevel}}</td>
+          <td>{{this.system.ppeCost}}</td>
+          <td class="item-controls">
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p class="empty-list">No spells. Drag spells from a compendium.</p>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  {{!-- Psionics --}}
+  {{#if system.toggles.usePsionics}}
+  <section class="panel">
+    <div class="panel-header"><h2>Psionics</h2></div>
+    <div class="module-grid">
+      <div class="field">
+        <label>ISP Current</label>
+        <input type="number" name="system.psionics.isp.value" value="{{system.psionics.isp.value}}" />
+      </div>
+      <div class="field">
+        <label>ISP Max</label>
+        <input type="number" name="system.psionics.isp.max" value="{{system.psionics.isp.max}}" />
+      </div>
+    </div>
+    {{#if psionics.length}}
+    <table class="item-list">
+      <thead>
+        <tr><th>Power</th><th>Category</th><th>ISP</th><th>Controls</th></tr>
+      </thead>
+      <tbody>
+        {{#each psionics}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.category}}</td>
+          <td>{{this.system.ispCost}}</td>
+          <td class="item-controls">
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p class="empty-list">No psionic powers. Drag powers from a compendium.</p>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  {{!-- Mutations --}}
+  {{#if system.toggles.useMutations}}
+  <section class="panel">
+    <div class="panel-header"><h2>Mutations</h2></div>
+    <div class="module-grid">
+      <div class="field">
+        <label>Animal Type</label>
+        <input type="text" name="system.mutations.animalType" value="{{system.mutations.animalType}}" />
+      </div>
+      <div class="field">
+        <label>BIO-E Total</label>
+        <input type="number" name="system.mutations.bioeTotal" value="{{system.mutations.bioeTotal}}" />
+      </div>
+      <div class="field">
+        <label>BIO-E Spent</label>
+        <input type="number" name="system.mutations.bioeSpent" value="{{system.mutations.bioeSpent}}" />
+      </div>
+      <div class="field">
+        <label>Size Level</label>
+        <input type="text" name="system.mutations.sizeLevel" value="{{system.mutations.sizeLevel}}" />
+      </div>
+    </div>
+  </section>
+  {{/if}}
+
+  {{!-- Super Powers --}}
+  {{#if system.toggles.useSuperPowers}}
+  <section class="panel">
+    <div class="panel-header"><h2>Super Powers</h2></div>
+    <div class="module-grid">
+      <div class="field">
+        <label>Category</label>
+        <input type="text" name="system.superPowers.category" value="{{system.superPowers.category}}" />
+      </div>
+      <div class="field">
+        <label>Weaknesses</label>
+        <input type="text" name="system.superPowers.weaknesses" value="{{system.superPowers.weaknesses}}" />
+      </div>
+    </div>
+  </section>
+  {{/if}}
+
+  {{!-- Mecha / Vehicle --}}
+  {{#if system.toggles.useMecha}}
+  <section class="panel">
+    <div class="panel-header"><h2>Mecha / Vehicle</h2></div>
+    <div class="module-grid">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="system.mecha.name" value="{{system.mecha.name}}" />
+      </div>
+      <div class="field">
+        <label>Speed</label>
+        <input type="text" name="system.mecha.speed" value="{{system.mecha.speed}}" />
+      </div>
+      <div class="field">
+        <label>Handling</label>
+        <input type="text" name="system.mecha.handling" value="{{system.mecha.handling}}" />
+      </div>
+    </div>
+    {{!-- Vehicle Items if any --}}
+    {{#if vehicles.length}}
+    <table class="item-list">
+      <thead>
+        <tr><th>Vehicle</th><th>MDC</th><th>Controls</th></tr>
+      </thead>
+      <tbody>
+        {{#each vehicles}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.mdcMain}}</td>
+          <td class="item-controls">
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{/if}}
+  </section>
+  {{/if}}
+
+  {{!-- Survival / Horror --}}
+  {{#if system.toggles.useSurvivalHorror}}
+  <section class="panel">
+    <div class="panel-header"><h2>Survival / Horror</h2></div>
+    <div class="module-grid">
+      <div class="field">
+        <label>Infection Level</label>
+        <input type="text" name="system.survival.infectionLevel" value="{{system.survival.infectionLevel}}" />
+      </div>
+      <div class="field">
+        <label>Supplies</label>
+        <input type="text" name="system.survival.supplies" value="{{system.survival.supplies}}" />
+      </div>
+      <div class="field">
+        <label>Insanity / Effects</label>
+        <input type="text" name="system.survival.insanityEffects" value="{{system.survival.insanityEffects}}" />
+      </div>
+    </div>
+  </section>
+  {{/if}}
+</section>

@@ -1,0 +1,10 @@
+{
+  "PALLADIUM": {
+    "SheetTitle": "Palladium Character Sheet",
+    "TabCore": "Core",
+    "TabCombat": "Combat",
+    "TabSkills": "Skills",
+    "TabGear": "Gear",
+    "TabModules": "Modules"
+  }
+}

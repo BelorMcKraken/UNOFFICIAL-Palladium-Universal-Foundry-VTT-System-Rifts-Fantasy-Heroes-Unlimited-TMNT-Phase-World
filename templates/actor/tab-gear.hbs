@@ -1,0 +1,175 @@
+<section class="tab" data-group="primary" data-tab="gear">
+
+  {{!-- Weapons --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Weapons</h2></div>
+    {{#if weapons.length}}
+    <table class="item-list">
+      <thead>
+        <tr>
+          <th>Weapon</th>
+          <th>Damage</th>
+          <th>Range</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each weapons}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td>
+            <img class="item-img" src="{{this.img}}" width="24" height="24" />
+            <span>{{this.name}}</span>
+            {{#if this.system.equipped}}<i class="fas fa-check-circle equipped-icon" title="Equipped"></i>{{/if}}
+          </td>
+          <td>{{this.system.damage}}</td>
+          <td>{{this.system.range}}</td>
+          <td class="item-controls">
+            <a data-action="toggleEquip" title="Equip/Unequip"><i class="fas fa-shield-alt"></i></a>
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p class="empty-list">No weapons.</p>
+    {{/if}}
+  </section>
+
+  {{!-- Armor --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Armor</h2></div>
+    {{#if armor.length}}
+    <table class="item-list">
+      <thead>
+        <tr>
+          <th>Armor</th>
+          <th>MDC</th>
+          <th>Tier</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each armor}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td>
+            <img class="item-img" src="{{this.img}}" width="24" height="24" />
+            <span>{{this.name}}</span>
+            {{#if this.system.equipped}}<i class="fas fa-check-circle equipped-icon" title="Equipped"></i>{{/if}}
+          </td>
+          <td>{{this.system.mdc.value}} / {{this.system.mdc.max}}</td>
+          <td>{{this.system.tier}}</td>
+          <td class="item-controls">
+            <a data-action="toggleEquip" title="Equip/Unequip"><i class="fas fa-shield-alt"></i></a>
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p class="empty-list">No armor.</p>
+    {{/if}}
+  </section>
+
+  {{!-- Equipment --}}
+  <section class="panel">
+    <div class="panel-header"><h2>Equipment</h2></div>
+    {{#if equipment.length}}
+    <table class="item-list">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Qty</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each equipment}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td>
+            <img class="item-img" src="{{this.img}}" width="24" height="24" />
+            <span>{{this.name}}</span>
+          </td>
+          <td>{{this.system.quantity}}</td>
+          <td class="item-controls">
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p class="empty-list">No equipment.</p>
+    {{/if}}
+  </section>
+
+  {{!-- Ammunition --}}
+  {{#if ammo.length}}
+  <section class="panel">
+    <div class="panel-header"><h2>Ammunition</h2></div>
+    <table class="item-list">
+      <thead>
+        <tr>
+          <th>Ammo</th>
+          <th>Damage</th>
+          <th>Qty</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each ammo}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td>
+            <img class="item-img" src="{{this.img}}" width="24" height="24" />
+            <span>{{this.name}}</span>
+          </td>
+          <td>{{this.system.damage}}</td>
+          <td>{{this.system.quantity}}</td>
+          <td class="item-controls">
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+  {{/if}}
+
+  {{!-- Cybernetics --}}
+  {{#if cybernetics.length}}
+  <section class="panel">
+    <div class="panel-header"><h2>Cybernetics / Bionics</h2></div>
+    <table class="item-list">
+      <thead>
+        <tr>
+          <th>Implant</th>
+          <th>Location</th>
+          <th>Controls</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each cybernetics}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td>
+            <img class="item-img" src="{{this.img}}" width="24" height="24" />
+            <span>{{this.name}}</span>
+            {{#if this.system.installed}}<i class="fas fa-microchip equipped-icon" title="Installed"></i>{{/if}}
+          </td>
+          <td>{{this.system.location}}</td>
+          <td class="item-controls">
+            <a data-action="toggleEquip" title="Install/Remove"><i class="fas fa-microchip"></i></a>
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </section>
+  {{/if}}
+</section>

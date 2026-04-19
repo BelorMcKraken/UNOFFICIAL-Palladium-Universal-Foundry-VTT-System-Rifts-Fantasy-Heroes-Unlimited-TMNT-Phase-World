@@ -1,0 +1,316 @@
+/* ── Palladium Universal Actor Sheet ─────────────────────────── */
+
+/* Sheet Header */
+.palladium .sheet-header {
+  display: flex;
+  gap: 16px;
+  padding: 8px;
+  border-bottom: 2px solid var(--color-border-light-2, #999);
+  margin-bottom: 8px;
+}
+
+.palladium .header-left {
+  flex: 1;
+}
+
+.palladium .header-right {
+  flex: 0 0 80px;
+}
+
+.palladium .charname input {
+  font-size: 1.4em;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid transparent;
+  width: 100%;
+  margin: 0;
+  padding: 2px 0;
+}
+
+.palladium .charname input:hover,
+.palladium .charname input:focus {
+  border-bottom: 1px solid var(--color-border-light-2, #999);
+}
+
+.palladium .profile-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border: 2px solid var(--color-border-light-2, #999);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Identity Grid */
+.palladium .identity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px 8px;
+  margin-top: 4px;
+}
+
+.palladium .identity-grid .field label {
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: var(--color-text-dark-secondary, #666);
+}
+
+.palladium .identity-grid .field input {
+  width: 100%;
+  font-size: 0.85em;
+}
+
+/* Tab Navigation */
+.palladium .sheet-tabs {
+  border-bottom: 2px solid var(--color-border-light-2, #999);
+  margin-bottom: 8px;
+}
+
+.palladium .sheet-tabs .item {
+  padding: 4px 12px;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.palladium .sheet-tabs .item.active {
+  border-bottom: 2px solid var(--color-border-highlight, #f00);
+  font-weight: bold;
+}
+
+/* Tab Content */
+.palladium .tab {
+  display: none;
+  padding: 0 4px;
+}
+
+.palladium .tab.active {
+  display: block;
+}
+
+/* Panels */
+.palladium .panel {
+  border: 1px solid var(--color-border-light-2, #ddd);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.palladium .panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.palladium .panel-header h2 {
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.palladium .item-count {
+  font-size: 0.75em;
+  color: var(--color-text-dark-secondary, #888);
+}
+
+/* Attribute Grid */
+.palladium .attributes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.palladium .attributes-grid .field {
+  text-align: center;
+}
+
+.palladium .attributes-grid .field label {
+  display: block;
+  font-size: 0.7em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.palladium .attributes-grid .field input {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+/* Derived Grid */
+.palladium .derived-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.palladium .readonly-field label {
+  display: block;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: var(--color-text-dark-secondary, #666);
+}
+
+.palladium .readonly-field input {
+  width: 100%;
+  text-align: center;
+  background: var(--color-bg-option, #f0f0f0);
+  border: 1px solid transparent;
+}
+
+/* Health Grid */
+.palladium .health-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+/* Combat Grid */
+.palladium .combat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+/* Saves Grid */
+.palladium .saves-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+/* Stacked Fields */
+.palladium .stacked-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Module Grid */
+.palladium .module-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+/* Toggle Grid */
+.palladium .toggle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+}
+
+.palladium .toggle-grid label {
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+/* Generic Field Styling */
+.palladium .field label {
+  display: block;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: var(--color-text-dark-secondary, #666);
+}
+
+.palladium .field input {
+  width: 100%;
+  font-size: 0.85em;
+}
+
+/* ── Item Lists ────────────────────────────────────────────── */
+
+.palladium .item-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85em;
+}
+
+.palladium .item-list thead tr {
+  border-bottom: 1px solid var(--color-border-light-2, #ddd);
+}
+
+.palladium .item-list th {
+  text-align: left;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  color: var(--color-text-dark-secondary, #888);
+  padding: 2px 4px;
+  font-weight: normal;
+}
+
+.palladium .item-list td {
+  padding: 3px 4px;
+  vertical-align: middle;
+}
+
+.palladium .item-list tr:hover {
+  background: var(--color-bg-option, rgba(0,0,0,0.05));
+}
+
+.palladium .item-list .item-img {
+  vertical-align: middle;
+  margin-right: 4px;
+  border: none;
+}
+
+.palladium .item-list .item-controls,
+.palladium .item-list .skill-controls {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.palladium .item-list .item-controls a,
+.palladium .item-list .skill-controls a {
+  margin-left: 4px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.palladium .item-list .item-controls a:hover,
+.palladium .item-list .skill-controls a:hover {
+  opacity: 1;
+}
+
+.palladium .equipped-icon {
+  color: var(--color-text-positive, green);
+  margin-left: 4px;
+  font-size: 0.8em;
+}
+
+.palladium .empty-list {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-text-dark-secondary, #888);
+  padding: 12px 0;
+  font-size: 0.85em;
+}
+
+/* Draggable */
+.palladium .draggable {
+  cursor: grab;
+}
+
+.palladium .draggable:active {
+  cursor: grabbing;
+}
+
+/* Fix scrolling */
+.palladium .palladium-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.palladium .tab.active {
+  overflow-y: auto;
+  flex: 1;
+}
