@@ -1,0 +1,266 @@
+<div class="palladium-sheet">
+{{!-- Header --}}
+<header class="sheet-header">
+  <div class="header-left">
+    <h1 class="charname">
+      <input name="name" type="text" value="{{actor.name}}" placeholder="Character Name" />
+    </h1>
+    <div class="identity-grid">
+      <div class="field">
+        <label>Alignment</label>
+        <input type="text" name="system.identity.alignment" value="{{system.identity.alignment}}" />
+      </div>
+      <div class="field">
+        <label>Level</label>
+        <input type="number" name="system.identity.level" value="{{system.identity.level}}" />
+      </div>
+      <div class="field">
+        <label>XP</label>
+        <input type="number" name="system.identity.xp" value="{{system.identity.xp}}" />
+      </div>
+      <div class="field">
+        <label>O.C.C. / R.C.C.</label>
+        <input type="text" name="system.identity.classLabel" value="{{system.identity.classLabel}}" />
+      </div>
+      <div class="field">
+        <label>Species</label>
+        <input type="text" name="system.identity.species" value="{{system.identity.species}}" />
+      </div>
+      <div class="field">
+        <label>Campaign</label>
+        <input type="text" name="system.identity.campaign" value="{{system.identity.campaign}}" />
+      </div>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="token-box">
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="Click to change token image" />
+    </div>
+  </div>
+</header>
+
+{{!-- Tab Navigation --}}
+<nav class="sheet-tabs">
+  <a class="item active" data-tab="core">Core</a>
+  <a class="item" data-tab="combat">Combat</a>
+  <a class="item" data-tab="skills">Skills</a>
+  <a class="item" data-tab="gear">Gear</a>
+  <a class="item" data-tab="modules">Modules</a>
+</nav>
+
+{{!-- ═══ CORE TAB ═══ --}}
+<section class="tab active" data-tab="core">
+  <section class="panel">
+    <div class="panel-header"><h2>Attributes</h2></div>
+    <div class="attributes-grid">
+      <div class="field"><label>I.Q.</label><input type="number" name="system.attributes.iq.value" value="{{system.attributes.iq.value}}" /></div>
+      <div class="field"><label>M.E.</label><input type="number" name="system.attributes.me.value" value="{{system.attributes.me.value}}" /></div>
+      <div class="field"><label>M.A.</label><input type="number" name="system.attributes.ma.value" value="{{system.attributes.ma.value}}" /></div>
+      <div class="field"><label>P.S.</label><input type="number" name="system.attributes.ps.value" value="{{system.attributes.ps.value}}" /></div>
+      <div class="field"><label>P.P.</label><input type="number" name="system.attributes.pp.value" value="{{system.attributes.pp.value}}" /></div>
+      <div class="field"><label>P.E.</label><input type="number" name="system.attributes.pe.value" value="{{system.attributes.pe.value}}" /></div>
+      <div class="field"><label>P.B.</label><input type="number" name="system.attributes.pb.value" value="{{system.attributes.pb.value}}" /></div>
+      <div class="field"><label>Spd</label><input type="number" name="system.attributes.spd.value" value="{{system.attributes.spd.value}}" /></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header"><h2>Derived Bonuses</h2></div>
+    <div class="derived-grid">
+      <div class="readonly-field"><label>I.Q. Skill Bonus</label><input type="text" value="{{system.derived.iqSkillBonus}}" readonly /></div>
+      <div class="readonly-field"><label>P.P. Combat Bonus</label><input type="text" value="{{system.derived.ppCombatBonus}}" readonly /></div>
+      <div class="readonly-field"><label>P.E. HP Bonus</label><input type="text" value="{{system.derived.peHpBonus}}" readonly /></div>
+      <div class="readonly-field"><label>P.S. Damage Bonus</label><input type="text" value="{{system.derived.psDamageBonus}}" readonly /></div>
+      <div class="readonly-field"><label>Perception</label><input type="text" value="{{system.derived.perception}}" readonly /></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header"><h2>Health &amp; Damage</h2></div>
+    <div class="health-grid">
+      <div class="field"><label>HP Current</label><input type="number" name="system.health.hp.value" value="{{system.health.hp.value}}" /></div>
+      <div class="field"><label>HP Max</label><input type="number" name="system.health.hp.max" value="{{system.health.hp.max}}" /></div>
+      <div class="field"><label>SDC Current</label><input type="number" name="system.health.sdc.value" value="{{system.health.sdc.value}}" /></div>
+      <div class="field"><label>SDC Max</label><input type="number" name="system.health.sdc.max" value="{{system.health.sdc.max}}" /></div>
+      <div class="field"><label>MDC Current</label><input type="number" name="system.health.mdc.value" value="{{system.health.mdc.value}}" /></div>
+      <div class="field"><label>MDC Max</label><input type="number" name="system.health.mdc.max" value="{{system.health.mdc.max}}" /></div>
+      <div class="field"><label>Armor</label><input type="text" name="system.health.armor" value="{{system.health.armor}}" /></div>
+      <div class="field"><label>Force Field</label><input type="number" name="system.health.forceField.value" value="{{system.health.forceField.value}}" /></div>
+    </div>
+  </section>
+</section>
+
+{{!-- ═══ COMBAT TAB ═══ --}}
+<section class="tab" data-tab="combat">
+  <section class="panel">
+    <div class="panel-header"><h2>Combat</h2></div>
+    <div class="combat-grid">
+      <div class="field"><label>Initiative</label><input type="number" name="system.derived.initiative" value="{{system.derived.initiative}}" /></div>
+      <div class="field"><label>Attacks per Melee</label><input type="number" name="system.combat.attacksPerMelee" value="{{system.combat.attacksPerMelee}}" /></div>
+      <div class="field"><label>Strike</label><input type="number" name="system.derived.strike" value="{{system.derived.strike}}" /></div>
+      <div class="field"><label>Parry</label><input type="number" name="system.derived.parry" value="{{system.derived.parry}}" /></div>
+      <div class="field"><label>Dodge</label><input type="number" name="system.derived.dodge" value="{{system.derived.dodge}}" /></div>
+      <div class="field"><label>Damage Bonus</label><input type="number" name="system.combat.damageBonus" value="{{system.combat.damageBonus}}" /></div>
+      <div class="field"><label>Disarm</label><input type="number" name="system.combat.disarm" value="{{system.combat.disarm}}" /></div>
+      <div class="field"><label>Pull Punch</label><input type="number" name="system.combat.pullPunch" value="{{system.combat.pullPunch}}" /></div>
+      <div class="field"><label>Roll w/ Impact</label><input type="number" name="system.combat.rollImpact" value="{{system.combat.rollImpact}}" /></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header"><h2>Critical / KO / Stun</h2></div>
+    <div class="stacked-fields">
+      <div class="field"><label>Critical Strike</label><input type="text" name="system.combat.critical" value="{{system.combat.critical}}" /></div>
+      <div class="field"><label>Knockout / Stun</label><input type="text" name="system.combat.koStun" value="{{system.combat.koStun}}" /></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-header"><h2>Saving Throws</h2></div>
+    <div class="saves-grid">
+      <div class="field"><label>vs Magic</label><input type="number" name="system.saves.magic" value="{{system.saves.magic}}" /></div>
+      <div class="field"><label>vs Psionics</label><input type="number" name="system.saves.psionics" value="{{system.saves.psionics}}" /></div>
+      <div class="field"><label>vs Poison</label><input type="number" name="system.saves.poison" value="{{system.saves.poison}}" /></div>
+      <div class="field"><label>vs Horror Factor</label><input type="number" name="system.saves.horror" value="{{system.saves.horror}}" /></div>
+      <div class="field"><label>vs Possession</label><input type="number" name="system.saves.possession" value="{{system.saves.possession}}" /></div>
+      <div class="field"><label>vs Insanity</label><input type="number" name="system.saves.insanity" value="{{system.saves.insanity}}" /></div>
+      <div class="field"><label>vs Coma / Death</label><input type="number" name="system.saves.comaDeath" value="{{system.saves.comaDeath}}" /></div>
+    </div>
+  </section>
+</section>
+
+{{!-- ═══ SKILLS TAB ═══ --}}
+<section class="tab" data-tab="skills">
+  <section class="panel">
+    <div class="panel-header">
+      <h2>Skills</h2>
+      <span class="item-count">{{skills.length}} skills</span>
+    </div>
+    {{#if skills.length}}
+    <table class="item-list skill-list">
+      <thead><tr><th>Skill</th><th>Category</th><th>%</th><th>Controls</th></tr></thead>
+      <tbody>
+        {{#each skills}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.category}}</td>
+          <td>{{this.system.baseProficiency}}</td>
+          <td class="item-controls">
+            <a data-action="editItem" title="Edit"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem" title="Delete"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <p class="empty-list">No skills. Drag skills from a compendium or create them manually.</p>
+    {{/if}}
+  </section>
+</section>
+
+{{!-- ═══ GEAR TAB ═══ --}}
+<section class="tab" data-tab="gear">
+  <section class="panel">
+    <div class="panel-header"><h2>Weapons</h2></div>
+    {{#if weapons.length}}
+    <table class="item-list">
+      <thead><tr><th>Weapon</th><th>Damage</th><th>Range</th><th>Controls</th></tr></thead>
+      <tbody>
+        {{#each weapons}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.damage}}</td>
+          <td>{{this.system.range}}</td>
+          <td class="item-controls">
+            <a data-action="editItem"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}<p class="empty-list">No weapons.</p>{{/if}}
+  </section>
+
+  <section class="panel">
+    <div class="panel-header"><h2>Armor</h2></div>
+    {{#if armor.length}}
+    <table class="item-list">
+      <thead><tr><th>Armor</th><th>MDC</th><th>Tier</th><th>Controls</th></tr></thead>
+      <tbody>
+        {{#each armor}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.mdc.value}} / {{this.system.mdc.max}}</td>
+          <td>{{this.system.tier}}</td>
+          <td class="item-controls">
+            <a data-action="editItem"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}<p class="empty-list">No armor.</p>{{/if}}
+  </section>
+
+  <section class="panel">
+    <div class="panel-header"><h2>Equipment</h2></div>
+    {{#if equipment.length}}
+    <table class="item-list">
+      <thead><tr><th>Item</th><th>Qty</th><th>Controls</th></tr></thead>
+      <tbody>
+        {{#each equipment}}
+        <tr class="item draggable" data-item-id="{{this._id}}">
+          <td><img class="item-img" src="{{this.img}}" width="24" height="24" /><span>{{this.name}}</span></td>
+          <td>{{this.system.quantity}}</td>
+          <td class="item-controls">
+            <a data-action="editItem"><i class="fas fa-edit"></i></a>
+            <a data-action="deleteItem"><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}<p class="empty-list">No equipment.</p>{{/if}}
+  </section>
+</section>
+
+{{!-- ═══ MODULES TAB ═══ --}}
+<section class="tab" data-tab="modules">
+  <section class="panel">
+    <div class="panel-header"><h2>Module Toggles</h2></div>
+    <div class="toggle-grid">
+      <label><input type="checkbox" name="system.toggles.useMdc" {{checked system.toggles.useMdc}} /> Use MDC</label>
+      <label><input type="checkbox" name="system.toggles.useMagic" {{checked system.toggles.useMagic}} /> Magic</label>
+      <label><input type="checkbox" name="system.toggles.usePsionics" {{checked system.toggles.usePsionics}} /> Psionics</label>
+      <label><input type="checkbox" name="system.toggles.useMutations" {{checked system.toggles.useMutations}} /> Mutations</label>
+      <label><input type="checkbox" name="system.toggles.useSuperPowers" {{checked system.toggles.useSuperPowers}} /> Super Powers</label>
+      <label><input type="checkbox" name="system.toggles.useMecha" {{checked system.toggles.useMecha}} /> Mecha</label>
+      <label><input type="checkbox" name="system.toggles.useSurvivalHorror" {{checked system.toggles.useSurvivalHorror}} /> Survival</label>
+    </div>
+  </section>
+
+  {{#if system.toggles.useMagic}}
+  <section class="panel">
+    <div class="panel-header"><h2>Magic</h2></div>
+    <div class="module-grid">
+      <div class="field"><label>PPE Current</label><input type="number" name="system.magic.ppe.value" value="{{system.magic.ppe.value}}" /></div>
+      <div class="field"><label>PPE Max</label><input type="number" name="system.magic.ppe.max" value="{{system.magic.ppe.max}}" /></div>
+      <div class="field"><label>Spell Strength</label><input type="text" name="system.magic.spellStrength" value="{{system.magic.spellStrength}}" /></div>
+    </div>
+  </section>
+  {{/if}}
+
+  {{#if system.toggles.usePsionics}}
+  <section class="panel">
+    <div class="panel-header"><h2>Psionics</h2></div>
+    <div class="module-grid">
+      <div class="field"><label>ISP Current</label><input type="number" name="system.psionics.isp.value" value="{{system.psionics.isp.value}}" /></div>
+      <div class="field"><label>ISP Max</label><input type="number" name="system.psionics.isp.max" value="{{system.psionics.isp.max}}" /></div>
+    </div>
+  </section>
+  {{/if}}
+</section>
+</div>

@@ -1,21 +1,20 @@
 {
   "id": "palladium-universal",
   "title": "Palladium Universal",
-  "description": "A modern universal Palladium Books system starter with tabs, collapsible panels, and derived stats.",
-  "version": "0.2.0",
-  "background": "systems/palladium-universal/assets/icon.png",
+  "description": "A modern Palladium Books Megaverse system with typed Items, DataModel schemas, and tabbed actor sheets.",
+  "version": "0.3.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
   },
   "authors": [
     {
-      "name": "Belor McKraken",
-      "url": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World"
+      "name": "Jason (simondsjt)",
+      "url": "https://github.com/simondsjt/megavault"
     }
   ],
   "esmodules": [
-    "module/system.js"
+    "module/system.mjs"
   ],
   "styles": [
     "styles/actor-sheet.css"
@@ -27,30 +26,39 @@
       "path": "lang/en.json"
     }
   ],
-  "media": [
-    {
-      "type": "icon",
-      "path": "assets/icon.png"
-    }
-  ],
   "primaryTokenAttribute": "health.hp",
   "secondaryTokenAttribute": "health.sdc",
   "documentTypes": {
     "Actor": {
       "character": {
-        "htmlFields": [
-          "notes"
-        ]
+        "htmlFields": ["biography"]
       }
+    },
+    "Item": {
+      "skill":      {},
+      "weapon":     {},
+      "armor":      {},
+      "spell":      {},
+      "psionic":    {},
+      "equipment":  {},
+      "ammo":       {},
+      "cybernetic": {},
+      "vehicle":    {},
+      "class":      {}
     }
   },
-  "socket": false,
   "grid": {
     "distance": 5,
     "units": "ft"
   },
-  "manifest": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/releases/latest/download/system.json",
-  "download": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/releases/latest/download/palladium-universal.zip",
-  "url": "https://github.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World",
-  "changelog": "https://raw.githubusercontent.com/BelorMcKraken/UNOFFICIAL-Palladium-Universal-Foundry-VTT-System-Rifts-Fantasy-Heroes-Unlimited-TMNT-Phase-World/main/CHANGELOG.md"
+  "socket": false,
+  "packs": [
+    {
+      "name": "skills",
+      "label": "Skills",
+      "path": "packs/skills",
+      "type": "Item"
+    }
+  ],
+  "url": "https://github.com/simondsjt/megavault"
 }
